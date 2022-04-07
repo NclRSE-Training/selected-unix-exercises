@@ -421,7 +421,7 @@ Prompt before (every) removal. The Unix shell doesn't have a trash bin, so all t
 <br>
 
 ## Wildcards
-(Examples from `shell-lesson-data/molecules` directory)<br><br>
+
 
 **`*` matches zero or more characters.**
  
@@ -446,7 +446,7 @@ Prompt before (every) removal. The Unix shell doesn't have a trash bin, so all t
 
 
 ## 3.7 List filenames matching a pattern
-In the `molecules` directory which `ls` command(s) will
+In the `proteins` directory which `ls` command(s) will
  produce this output?
 
  `ethane.pdb   methane.pdb`
@@ -641,7 +641,7 @@ done
 
 ## 5.1 Variables in Loops
 
-This exercise refers to the `shell-lesson-data/molecules` directory. `ls` gives the following output:
+This exercise refers to the `shell-lesson-data/exercise-data/proteins` directory. `ls` gives the following output:
 
 ~~~
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
@@ -690,7 +690,7 @@ The second code block lists a different file on each loop iteration. The value o
 
 ## 5.2.1 Limiting Sets of Files
 
-A reminder of the `shell-lesson-data/molecules` directory. `ls` gives the following output:
+A reminder of the `shell-lesson-data/exercise-data/proteins` directory. `ls` gives the following output:
 
 ~~~
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
@@ -765,7 +765,7 @@ $ for filename in *c*
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 ~~~
 
-In the `shell-lesson-data/molecules` directory, what is the effect of this loop?
+In the `shell-lesson-data/exercise-data/proteins` directory, what is the effect of this loop?
 
 ~~~
 for alkanes in *.pdb
@@ -796,7 +796,7 @@ The text from each file in turn gets written to the `alkanes.pdb` file. However,
 
 ## 5.4 Saving to a File in a Loop - Part Two
 
-Also in the `shell-lesson-data/molecules` directory, what would be the output of the following loop?
+Also in the `shell-lesson-data/exercise-data/proteins` directory, what would be the output of the following loop?
 
 ~~~
 for datafile in *.pdb
@@ -1099,7 +1099,7 @@ Script 3 would print all the arguments to the script (i.e. all the `.pdb` files)
 
 ## 6.6 Debugging Scripts
 
-Suppose you have saved the following script in a file called `do-errors.sh` in Nelle’s `north-pacific-gyre/2012-07-03` directory:
+Suppose you have saved the following script in a file called `do-errors.sh` in Nelle’s `north-pacific-gyre` directory:
 
 ~~~
 # Calculate stats for data files.
@@ -1113,13 +1113,13 @@ done
 When you run it:
 
 ~~~
-$ bash do-errors.sh NENE*[AB].txt
+$ bash do-errors.sh NENE*A.txt NENE*B.txt
 ~~~
 
 the output is blank. To figure out why, re-run the script using the `-x` option:
 
 ~~~
-bash -x do-errors.sh NENE*[AB].txt
+bash -x do-errors.sh NENE*A.txt NENE*B.txt
 ~~~
 
 What is the output showing you? Which line is responsible for the error?
